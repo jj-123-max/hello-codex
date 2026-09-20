@@ -1,0 +1,15 @@
+# 工作区私有数据（记忆、临时脚本等）
+.workbuddy/
+
+# zip 功能测试产物
+deploy/.ziptest/
+
+# Node 依赖与日志
+node_modules/
+*.log
+npm-debug.log*
+
+# 系统垃圾文件
+.DS_Store
+Thumbs.db
+desktop.ini

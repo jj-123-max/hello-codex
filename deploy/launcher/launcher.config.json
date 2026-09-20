@@ -1,0 +1,22 @@
+{
+  "appName": "鸿鹭Agent工作台",
+  "channel": "stable",
+  "updateUrl": "http://update.honglu.local/releases/latest.json",
+  "checkOnStart": true,
+  "autoApply": true,
+  "keepVersions": 3,
+  "serverEntry": "src/server.js",
+  "port": 4000,
+  "consolePort": 4080,
+  "openBrowser": true,
+  "httpTimeoutMs": 8000,
+  "startupGraceMs": 25000,
+  "healthPath": "/",
+  "_说明": {
+    "updateUrl": "内网更新源清单地址，指向 latest.json。没有域名可直接用 IP：http://10.0.1.100:8090/latest.json。也可写成数组做主备容灾：[\"http://10.0.1.100:8090/latest.json\", \"http://10.0.1.101:8090/latest.json\"]，按序探测，第一个通的生效。还可用环境变量 HL_UPDATE_URL 覆盖，或在 data/launcher.config.json 里按用户覆盖（推荐：升级不会动它，换 IP 时改这一个文件即可）",
+    "channel": "更新频道，服务器可按 channel 下发不同清单（stable / beta）",
+    "autoApply": "true=发现新版自动下载切换；false=只检查不升级",
+    "keepVersions": "本地保留的历史版本数，用于快速回滚",
+    "checkOnStart": "每次启动检查更新；拉不到源会静默降级为本地启动，不阻塞用户"
+  }
+}
